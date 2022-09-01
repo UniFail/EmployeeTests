@@ -8,18 +8,10 @@ import java.util.stream.Collectors;
 
 @Service
 public class DepartmentService {
-    private List<Employee> employees = new ArrayList<>(Arrays.asList(
-            new Employee("Elijah", "Powell", 100000, 1),
-            new Employee("Connor", "Mitchell", 120000, 2),
-            new Employee("Dylan", "Lopez", 200000, 3),
-            new Employee("Jayden", "Martin", 130000, 3),
-            new Employee("Sebastian", "Cook", 90000, 3),
-            new Employee("Leslie", "Adams", 150000, 4),
-            new Employee("Paige", "Barnes", 120000, 4),
-            new Employee("Isabella", "Ross", 100000, 1),
-            new Employee("Arianna", "Sanders", 135000, 5),
-            new Employee("Caroline", "Flores", 111000, 5)));
+    private List<Employee> employees = new ArrayList<>();
+
     EmployeeService employeeService = new EmployeeService();
+
 
     public int maxSalary(Integer department) {
         return employees.stream()
